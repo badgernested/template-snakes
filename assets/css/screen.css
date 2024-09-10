@@ -553,17 +553,20 @@ button {
     vertical-align: middle;
 }
 
-/* Wraps the main content & footer */
 .site-wrapper {
+	background: #111;
+}
+
+/* Wraps the main content & footer */
+.menu-animate {
     position: relative;
     z-index: 10;
-    min-height: 100%;
-    background: #111;
+    min-height: 110%;
     -webkit-transition: -webkit-transform 0.5s ease;
             transition: transform 0.5s ease;
 }
 
-body.nav-opened .site-wrapper {
+body.nav-opened .menu-animate {
     overflow-x: hidden;
     -webkit-transform: translate3D(-300px, 0, 0);
         -ms-transform: translate3D(-300px, 0, 0);
@@ -614,9 +617,19 @@ body.nav-opened .site-wrapper {
 }
 
 .lang-selector {
+	margin: 5px -65px 5px 5px;
 	display: block;
-	float: left;
-	margin-left: 20px;
+	float: right;
+}
+
+.blog-logo {
+
+}
+
+.blog-logo-image
+{
+	width: 36px;
+	height: 36px;
 }
 
 .box {
@@ -633,7 +646,7 @@ body.nav-opened .site-wrapper {
 
 .main-nav {
     position: relative;
-    padding: 35px 40px;
+    padding: 15px 20px;
     margin: 0 0 30px 0;
 }
 
@@ -659,7 +672,7 @@ body.nav-opened .nav-cover {
     bottom: 0;
     z-index: 5;
     width: 300px;
-    opacity: 0;
+    opacity: 1.0;
     background: #0C0C0C;
     margin-bottom: 0;
     text-align: left;
@@ -671,20 +684,36 @@ body.nav-opened .nav-cover {
 }
 
 body.nav-closed .nav {
-    -webkit-transform: translate3D(97px, 0, 0);
-        -ms-transform: translate3D(97px, 0, 0);
-            transform: translate3D(97px, 0, 0);
+	opacity: 0.0;
+	transition: 
+    -webkit-transition: -webkit-transform 0.3s ease,
+                        opacity 0.2s;
+            transition: transform 0.3s ease,
+                        opacity 0.2s;
+    -webkit-transform: translate3D(-97, 0, 0);
+        -ms-transform: translate3D(-97, 0, 0);
+            transform: translate3D(-97, 0, 0);
 }
 
 body.nav-opened .nav {
     opacity: 1;
     -webkit-transition: -webkit-transform 0.3s ease,
-                        opacity 0s ease 0s;
+                        opacity 0.2s;
             transition: transform 0.3s ease,
-                        opacity 0s ease 0s;
+                        opacity 0.2s;
     -webkit-transform: translate3D(0, 0, 0);
         -ms-transform: translate3D(0, 0, 0);
             transform: translate3D(0, 0, 0);
+}
+
+body.nav-closed .lang-selector {
+	margin: 5px 25px 5px 5px;
+	transition: margin 0.2s;
+}
+
+body.nav-opened .nav {
+	margin: 5px 0px 5px 5px;
+	transition: margin 0.2s;
 }
 
 .nav-title {
@@ -700,7 +729,7 @@ body.nav-opened .nav {
 .nav-close {
     position: absolute;
     top: 38px;
-    right: 25px;
+    right: 60px;
     width: 20px;
     height: 20px;
     padding: 0;
@@ -1015,22 +1044,17 @@ body.nav-opened .nav {
 
 /* Appears in the top left corner of your home page */
 .blog-logo {
-    display: block;
     float: left;
     border: none !important; /* Makes sure there is never a border */
-	background:url('../images/home.png') no-repeat 0 0;
-	background-repeat: no-repeat;
-	background-size: 70% 70%;
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 70px;
 	opacity: 0.6;
 	transition: opacity 0.2s;
+    margin: 0 auto;
+    flex-direction: column;
 }
 
 .blog-logo:hover{
-    background:url('../images/home.png') no-repeat 0 0 !important;
-	background-repeat: no-repeat !important;
-	background-size: 70% 70% !important;
 	opacity: 1.0 !important;
 }
 
@@ -1181,7 +1205,7 @@ body.page-template .post-title {
 }
 
 .content {
-	margin-top: 50px;
+	padding-top: 50px;
 }
 
 /* Stop elements, such as img wider than the post content, from
@@ -1968,6 +1992,10 @@ body.page-template .post-title {
         padding: 5px;
         margin-bottom: 2rem;
     }
+	
+	.nav {
+		width: 100%;
+	}
 
     .menu-button {
         padding: 0 5px;
@@ -1975,6 +2003,7 @@ body.page-template .post-title {
         border-width: 0;
         color: #2e2e2e;
         background: transparent;
+		line-height: 65px;
     }
     .menu-button:hover {
         color: #2e2e2e;
@@ -2214,12 +2243,34 @@ body.page-template .post-title {
         width: 100%;
     }
 	
-	.blog-logo {
-		margin: 10px;
-	}
-	
 	.lang-selector {
 		margin: 10px;
+		line-height: 50px;
+	}
+	
+	.menu-animate {
+		-webkit-transition: -webkit-transform 0.5s ease;
+				transition: transform 0.5s ease;
+	}
+
+	body.nav-opened .menu-animate {
+		overflow-x: hidden;
+		-webkit-transform: translate3D(-100vw, 0, 0);
+			-ms-transform: translate3D(-100vw, 0, 0);
+				transform: translate3D(-100vw, 0, 0);
+		-webkit-transition: -webkit-transform 0.3s ease;
+				transition: transform 0.3s ease;
+	}
+
+	.blog-logo-image
+	{
+		width: 28px;
+		height: 28px;
+	}
+	
+	.blog-logo-text
+	{
+		margin-top: -10px;
 	}
 
 }
@@ -2247,12 +2298,12 @@ body.page-template .post-title {
 		transition: none;
 	}
 	
-	.site-wrapper {
+	.menu-animate {
 		-webkit-transition: none;
 				transition: none;
 	}
 
-	body.nav-opened .site-wrapper {
+	body.nav-opened .menu-animate {
 		-webkit-transform: none;
 			-ms-transform: none;
 				transform: none;
@@ -2341,6 +2392,27 @@ body.page-template .post-title {
 
 	.gh-subscribe .subscribe-email:focus {
 		transition: none;
+	}
+
+	body.nav-closed .lang-selector {
+		transition: none;
+	}
+
+	body.nav-opened .nav {
+		transition: none;
+	}
+
+	.menu-animate {
+		-webkit-transition: none;
+				transition: none;
+	}
+
+	body.nav-opened .menu-animate {
+		-webkit-transform: none;
+			-ms-transform: none;
+				transform: none;
+		-webkit-transition: none;
+				transition: none;
 	}
 
 }

@@ -10,15 +10,21 @@ class: 'page-template'
 <!-- Everything inside the #post tags pulls data from the page -->
 <!-- #post -->
 
-<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover | relative_url }}){% else %}no-cover{% endif %}">
-    <nav class="main-nav {% if page.cover %}overlay{% endif %} clearfix">
-        {% include logo.html %}
+<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover  | relative_url }}) {% else %}no-cover{% endif %}">
+		<div class="main-nav overlay ">
+			<nav class="clearfix menu-animate">
+				{% include logo.html %}
+				
+				<!-- Language separator -->
+				{% include language.html %}
+			
+				<a class="menu-button icon-menu" href="#" tabindex="-1">Menu</a>
+
+			</nav>
+		</div>
 		
-		<!-- Language separator -->
-		{% include language.html %}
-		
-        <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-    </nav>
+		<!-- The blog navigation links -->
+		{% include navigation.html %}
 </header>
 
 <main class="content" role="main">

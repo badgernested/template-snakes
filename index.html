@@ -28,32 +28,32 @@ cover6_subtitle: Supports up to 8 frames.
 cover6fr_title: Racontez des histoires avec des images.
 cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 ---
-<!-- < default -->
-<!-- The tag above means - insert everything in this file into the [body] of the default.hbs template -->
-
-<!-- just clones of the featured header if you want to do more -->
 
 {% if page.cover1 %}
 	<header class="main-header header1"
 			style="background-image: url({{ page.cover1 | relative_url }})">
 			
-		<nav class="main-nav overlay clearfix">
+		<nav class="main-nav overlay clearfix menu-animate">
 			{% include logo.html %}
 			
 			<!-- Language separator -->
 			{% include language.html %}
-			
-			<a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+		
+			<a class="menu-button icon-menu" href="#" tabindex="-1">Menu</a>
+
 		</nav>
-			
+		
+		<!-- The blog navigation links -->
+		{% include navigation.html %}
+				
 		{% if site.data.l10n.lang contains 'en' %}
 			{% if page.cover1_title %}
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover1_title }}</h1>
 						{% if page.cover1_subtitle %}
@@ -67,9 +67,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover1fr_title }}</h1>
 						{% if page.cover1fr_subtitle %}
@@ -79,7 +79,7 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				</div>
 			{% endif %}
 		{% endif %}
-		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"  tabindex="-1"><span class="hidden">Scroll Down</span></a>
 	</header>
 {% endif %}
 
@@ -91,9 +91,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover2_title }}</h1>
 						{% if page.cover2_subtitle %}
@@ -107,9 +107,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover2fr_title }}</h1>
 						{% if page.cover2fr_subtitle %}
@@ -119,7 +119,7 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				</div>
 			{% endif %}
 		{% endif %}
-		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"  tabindex="-1"><span class="hidden">Scroll Down</span></a>
 	</header>
 {% endif %}
 
@@ -131,9 +131,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover3_title }}</h1>
 						{% if page.cover3_subtitle %}
@@ -147,9 +147,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover3fr_title }}</h1>
 						{% if page.cover3fr_subtitle %}
@@ -159,7 +159,7 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				</div>
 			{% endif %}
 		{% endif %}
-		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"  tabindex="-1"><span class="hidden">Scroll Down</span></a>
 	</header>
 {% endif %}
 
@@ -171,9 +171,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover4_title }}</h1>
 						{% if page.cover4_subtitle %}
@@ -187,9 +187,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover4fr_title }}</h1>
 						{% if page.cover4fr_subtitle %}
@@ -199,7 +199,7 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				</div>
 			{% endif %}
 		{% endif %}
-		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"  tabindex="-1"><span class="hidden">Scroll Down</span></a>
 	</header>
 {% endif %}
 
@@ -211,9 +211,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover5_title }}</h1>
 						{% if page.cover5_subtitle %}
@@ -227,9 +227,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover5fr_title }}</h1>
 						{% if page.cover5fr_subtitle %}
@@ -239,7 +239,7 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				</div>
 			{% endif %}
 		{% endif %}
-		<a class="scroll-down icon-arrow-left" href="#header6" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+		<a class="scroll-down icon-arrow-left" href="#header6" data-offset="-45"  tabindex="-1"><span class="hidden">Scroll Down</span></a>
 	</header>
 {% endif %}
 
@@ -251,9 +251,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover6_title }}</h1>
 						{% if page.cover6_subtitle %}
@@ -267,9 +267,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover6fr_title }}</h1>
 						{% if page.cover6fr_subtitle %}
@@ -279,7 +279,7 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				</div>
 			{% endif %}
 		{% endif %}
-		<a class="scroll-down icon-arrow-left" href="#header7" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+		<a class="scroll-down icon-arrow-left" href="#header7" data-offset="-45"  tabindex="-1"><span class="hidden">Scroll Down</span></a>
 	</header>
 {% endif %}
 
@@ -291,9 +291,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover7_title }}</h1>
 						{% if page.cover7_subtitle %}
@@ -307,9 +307,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover7fr_title }}</h1>
 						{% if page.cover7fr_subtitle %}
@@ -319,7 +319,7 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				</div>
 			{% endif %}
 		{% endif %}
-		<a class="scroll-down icon-arrow-left" href="#header8" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+		<a class="scroll-down icon-arrow-left" href="#header8" data-offset="-45"  tabindex="-1"><span class="hidden">Scroll Down</span></a>
 	</header>
 {% endif %}
 
@@ -332,9 +332,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover8_title }}</h1>
 						{% if page.cover8_subtitle %}
@@ -348,9 +348,9 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				<div class="vertical">
 				
 					{% if page.show_boxes %}
-						<div class="main-header-content inner box">
+						<div class="main-header-content inner box menu-animate">
 					{% else %}
-						<div class="main-header-content inner">
+						<div class="main-header-content inner menu-animate">
 					{% endif %}
 						<h1 class="page-title">{{ page.cover8fr_title }}</h1>
 						{% if page.cover8fr_subtitle %}
@@ -360,7 +360,7 @@ cover6fr_subtitle: Prend en charge jusqu'à 8 cadres.
 				</div>
 			{% endif %}
 		{% endif %}
-		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+		<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"  tabindex="-1"><span class="hidden">Scroll Down</span></a>
 	</header>
 {% endif %}
 

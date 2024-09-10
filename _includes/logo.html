@@ -1,9 +1,6 @@
 
-
-<div class="lang-selector">
-		{% if site.data.l10n.lang contains 'fr' %}
-			<a class="blog-logo" href="https://{{ site.url }}"><span hidden="hidden">Home</span></a>
-		{% else %}
-			<a class="blog-logo" href="https://{{ site.url }}/{{site.data.l10n.lang}}"><span hidden="hidden">Home</span></a>
-		{% endif %} 
-</div>
+{% if site.data.l10n.lang contains 'fr' %}
+	<a class="blog-logo" href="https://{{ site.url }}"><img class="blog-logo-image" src="/assets/images/home.png" alt-text="Home Button"/><div class="blog-logo-text">Home</div></a>
+{% else %}
+	<a class="blog-logo" href="https://{{ site.url }}/{{site.data.l10n.lang}}"><img src="/assets/images/home.png" width="36" height="36"/><div class="logo-text">Home</div></a>
+{% endif %} 

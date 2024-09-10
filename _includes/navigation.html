@@ -1,7 +1,8 @@
+
 <div class="nav">
     <h3 class="nav-title">{{ site.data.l10n.menu }}</h3>
-    <a href="#" class="nav-close">
-        <span class="hidden">{{ site.data.l10n.menu_close }}</span>
+    <a href="#" class="nav-close"  tabindex="-1">
+        {{ site.data.l10n.menu_close }}
     </a>
     <ul>
 		<li class="nav-counter {% if page.url contains 'test' %} nav-current{% endif %} nav-subelement" role="presentation" >{{ site.data.l10n.menu_navigation }}

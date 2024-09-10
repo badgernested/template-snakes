@@ -31,9 +31,6 @@
 </head>
 <body class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %} nav-closed">
 
-    <!-- The blog navigation links -->
-    {% include navigation.html %}
-
     <div class="site-wrapper">
 
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
@@ -41,20 +38,16 @@
 
     </div>
 
-	<div class="main-nav">
+	<footer class="main-nav">
 		<a href="{{ absolute_url }}"> {{ site.data.l10n.top }}</a>
-	</div>
+	</footer>
 	
     <!-- highlight.js -->
-    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script> -->
-    <!-- <script>hljs.initHighlightingOnLoad();</script> -->
 
     <!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Ghost outputs important scripts and data with this tag -->
     <!-- {{ghost_foot}} -->
-    <!-- Fitvids makes video embeds responsive and awesome -->
-    <script type="text/javascript" src="{{ 'assets/js/jquery.fitvids.js' | relative_url }}"></script>
     <!-- The main JavaScript file for Casper -->
     <script type="text/javascript" src="{{ 'assets/js/index.js' | relative_url }}"></script>
 
