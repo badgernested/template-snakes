@@ -1,7 +1,9 @@
-        <a class="blog-logo" href="
-		{% if site.data.l10n.lang contains 'en' %}
-			https://{{ site.url }}/en
+
+
+<div class="lang-selector">
+		{% if site.data.l10n.lang contains 'fr' %}
+			<a class="blog-logo" href="https://{{ site.url }}"><span hidden="hidden">Home</span></a>
 		{% else %}
-			https://{{ site.url }}
+			<a class="blog-logo" href="https://{{ site.url }}/{{site.data.l10n.lang}}"><span hidden="hidden">Home</span></a>
 		{% endif %} 
-		"><span hidden="hidden">Home</span></a>
+</div>

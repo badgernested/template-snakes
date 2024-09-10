@@ -12,7 +12,7 @@ class: 'page-template'
 
 <header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover | relative_url }}){% else %}no-cover{% endif %}">
     <nav class="main-nav {% if page.cover %}overlay{% endif %} clearfix">
-        <a class="blog-logo" href="https://{{ site.url }}"><span hidden="hidden">Home</span></a>
+        {% include logo.html %}
 		
 		<!-- Language separator -->
 		{% include language.html %}
