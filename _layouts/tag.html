@@ -22,7 +22,7 @@ show_boxes: true
 <!-- If we have a tag cover, display that - else blog cover - else nothing -->
 <header class="main-header tag-head" style="background-image: url({{ new_cover | relative_url }})">
     <nav class="main-nav overlay clearfix">
-        <a class="blog-logo" href="https://{{ site.url }}"><span hidden="hidden">Home</span></a>
+        {% include logo.html %}
 		
 		<!-- Language separator -->
 		{% include language.html %}

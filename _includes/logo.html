@@ -1,0 +1,7 @@
+        <a class="blog-logo" href="
+		{% if site.data.l10n.lang contains 'en' %}
+			https://{{ site.url }}/en
+		{% else %}
+			https://{{ site.url }}
+		{% endif %} 
+		"><span hidden="hidden">Home</span></a>
