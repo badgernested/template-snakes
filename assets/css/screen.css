@@ -623,7 +623,7 @@ body.nav-opened .menu-animate {
 }
 
 .blog-logo {
-
+	color: white;
 }
 
 .blog-logo-image
@@ -685,6 +685,7 @@ body.nav-opened .nav-cover {
 
 body.nav-closed .nav {
 	opacity: 0.0;
+	display: none;
 	transition: 
     -webkit-transition: -webkit-transform 0.3s ease,
                         opacity 0.2s;
@@ -2248,6 +2249,10 @@ body.page-template .post-title {
 		line-height: 50px;
 	}
 	
+	.lang-selector a {
+		color: white;
+	}
+	
 	.menu-animate {
 		-webkit-transition: -webkit-transform 0.5s ease;
 				transition: transform 0.5s ease;
@@ -2260,6 +2265,11 @@ body.page-template .post-title {
 				transform: translate3D(-100vw, 0, 0);
 		-webkit-transition: -webkit-transform 0.3s ease;
 				transition: transform 0.3s ease;
+	}
+
+	.blog-logo
+	{
+		opacity: 1.0;
 	}
 
 	.blog-logo-image

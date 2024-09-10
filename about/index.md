@@ -1,8 +1,10 @@
 ---
 layout: page
 title: About
+title_fr: About_fr
 current: about
 cover: 'assets/images/about.jpg'
+show_boxes: true
 ---
 
 {% if site.data.l10n.lang contains 'en' %}
