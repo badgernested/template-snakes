@@ -38,7 +38,7 @@
 
     </div>
 
-	<footer class="main-nav">
+	<footer>
 		<a href="{{ absolute_url }}"> {{ site.data.l10n.top }}</a>
 	</footer>
 	
@@ -50,6 +50,13 @@
     <!-- {{ghost_foot}} -->
     <!-- The main JavaScript file for Casper -->
     <script type="text/javascript" src="{{ 'assets/js/index.js' | relative_url }}"></script>
+	
+	<script type="text/javascript">
+	  document.addEventListener("DOMContentLoaded",function(){
+		let node = document.querySelector('.preload-transitions');
+		node.classList.remove('preload-transitions');
+	  });
+	</script>
 
 </body>
 </html>

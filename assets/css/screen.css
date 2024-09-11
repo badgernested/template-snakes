@@ -949,7 +949,7 @@ body.nav-opened .nav {
     border-color: rgba(255, 255, 255, 0.6);
 }
 .nav-closed .menu-button:hover {
-    color: #222;
+    color: #333;
 }
 
 /* When the navigation is closed and there is no cover image */
@@ -2278,6 +2278,10 @@ body.page-template .post-title {
 		padding: 0px 0px 0px 0px;
 		transition: padding 0.2s;
 	}
+	
+	.nav-closed .menu-button:hover {
+		color: #CCC;
+	}	
 
 	/* animation changes */
 	
@@ -2298,13 +2302,18 @@ body.page-template .post-title {
 				transition: none;
 		 translate: -600px 0px;
 	}
-
-	.nav {
-		-webkit-transition: none;
-				transition: none;
+	
+	.preload-transitions * {
+	  -webkit-transition: none !important;
+	  -moz-transition: none !important;
+	  -ms-transition: none !important;
+	  -o-transition: none !important;
+	  transition: none !important;
 	}
 
 	body.nav-opened .nav {
+		position: absolute;
+		right: 0px;
 		-webkit-transition: none;
 				transition: none;
 		-webkit-transform: none;
@@ -2347,15 +2356,24 @@ body.page-template .post-title {
 		opacity: 1.0;
 		transition: opacity 0.3s;
 		margin: 0px;
-
+		position: absolute;
+		right: 0px;
 	}
 	
 	body.nav-closed .nav {
 		opacity: 0.0;
 		display: block;
-		transition: opacity 0.3s display 0.3s 0.3s;
+		
+		position: absolute;
+
+		
 	}
 	
+	footer {
+		position: relative;
+		top: 40px;
+	}
+		
 }
 
 /* ==========================================================================
