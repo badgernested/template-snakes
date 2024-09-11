@@ -1995,6 +1995,8 @@ body.page-template .post-title {
 	.nav {
 		width: 100%;
 		overflow-y: unset;
+		height: 800px;
+		background: linear-gradient(to bottom, rgba(15,15,15,1.0) 0%,rgba(15,15,15,1.0) 70%,rgba(15,15,15,0.0) 100%);
 	}
 
     .menu-button {
@@ -2328,6 +2330,7 @@ body.page-template .post-title {
 	}
 
 	.subscribe-button {
+		position: fixed;
 		transition: none;
 	}
 
@@ -2365,13 +2368,6 @@ body.page-template .post-title {
 		display: block;
 		
 		position: absolute;
-
-		
-	}
-	
-	footer {
-		position: relative;
-		top: 40px;
 	}
 		
 }
