@@ -561,7 +561,6 @@ button {
 .menu-animate {
     position: relative;
     z-index: 10;
-    min-height: 110%;
     -webkit-transition: -webkit-transform 0.5s ease;
             transition: transform 0.5s ease;
 }
@@ -1176,6 +1175,15 @@ body.page-template .post-title {
     line-height: 1.5em;
 }
 
+footer {
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	padding: 15px;
+}
+
+.top-menu {
+	height: 100px;
+}
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
@@ -2241,7 +2249,6 @@ body.page-template .post-title {
 
     .read-next {
         margin-top: 2rem;
-        margin-bottom: -37px;
     }
 
     .read-next .post {
@@ -2330,8 +2337,12 @@ body.page-template .post-title {
 	}
 
 	.subscribe-button {
-		position: fixed;
+		position: relative;
 		transition: none;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		bottom: 0px;
 	}
 
 	.menu-button {
