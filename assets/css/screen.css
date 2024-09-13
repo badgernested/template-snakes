@@ -2215,7 +2215,8 @@ footer {
     }
 
     .post-head.main-header {
-        height: 30vh;
+		height: 50vh;
+		min-height: 500px;
     }
 
     .tag-head.main-header,
